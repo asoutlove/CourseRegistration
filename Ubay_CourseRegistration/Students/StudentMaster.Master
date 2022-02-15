@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="StudentMaster.master.cs" Inherits="Ubay_CourseRegistration.Students.StudentMaster" %>
+
+<%@ Register Src="~/Students/StudentControlHeader.ascx" TagPrefix="uc1" TagName="StudentControlHeader" %>
+<%@ Register Src="~/Students/StudentControlLeft.ascx" TagPrefix="uc1" TagName="StudentControlLeft" %>
+<%@ Register Src="~/Students/StudentControlFooter.ascx" TagPrefix="uc1" TagName="StudentControlFooter" %>
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/console.js"></script>
+    <script src="../vendor/jquery/jquery-3.2.1.min.js"></script>
+    <link href="../js/fullcalendar/main.css" rel="stylesheet" />
+    <script src="../js/moment.js"></script>
+    <script src="../js/fullcalendar/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
+        });
+    </script>
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <uc1:StudentControlHeader runat="server" id="StudentControlHeader" />
+        <uc1:StudentControlLeft runat="server" id="StudentControlLeft" />
+           <div class="container2">
+               <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+           </div></div>
+        <uc1:StudentControlFooter runat="server" id="StudentControlFooter" />
+    </form>
+</body>
+</html>

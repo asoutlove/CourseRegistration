@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ManagerMaster.master.cs" Inherits="Ubay_CourseRegistration.Managers.ManagerMaster" %>
+
+<%@ Register Src="~/Managers/ManagerControlHeader.ascx" TagPrefix="uc1" TagName="ManagerControlHeader" %>
+<%@ Register Src="~/Managers/ManagerControlLeft.ascx" TagPrefix="uc1" TagName="ManagerControlLeft" %>
+<%@ Register Src="~/Managers/ManagerControlFooter.ascx" TagPrefix="uc1" TagName="ManagerControlFooter" %>
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <uc1:ManagerControlHeader runat="server" ID="ManagerControlHeader" />
+        <uc1:ManagerControlLeft runat="server" ID="ManagerControlLeft" />
+        <div class="container2">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div></div>
+        <div>
+            <uc1:ManagerControlFooter runat="server" ID="ManagerControlFooter" />
+        </div>
+    </form>
+</body>
+</html>
